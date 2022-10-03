@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS identité (
+nom_candidat varchar (14),
+prénom_candidat varchar (14),
+ID_candidat CHAR(13),
+code_bts CHAR(5)
+);
+
+CREATE TABLE IF NOT EXISTS note (
+note_obtenu float (3),
+le_coefficient float (2),
+commentaire longtext, 
+date_épreuve SMALLINT,
+heure_de_convocation TIME
+);
+
+CREATE TABLE IF NOT EXISTS épreuve (
+Libellé_épreuve_CCF varchar(29), 
+libellé_du_BTS varchar (39),
+Option_du_BTS TEXT(8),
+année_scolaire smallint (4),
+Code_CCF CHAR(5),
+la_durée SMALLINT
+);
+
+
+CREATE TABLE IF NOT EXISTS id_prof (
+nom_prof varchar (14),
+prénom_prof varchar (14),
+ID_NUMEN char (13),
+ID_NUMERO smallint(10),
+ID_MAIL char
+)
+;
