@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Login</title>
+    <link rel="stylesheet" href="styleFormulaire.css">
+    <title>Formulaire</title>
 </head>
-   <header>
-       <a href="/index.html"> </a> <img src="Logo.jpeg" title="Accueil" width="100" height="100"></a>
-
-    </header>
 <body>
+    <form method="post" action="" enctype="multipart/form-data">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Nom"><br>
 
-    
+        <label for="prenom">Prenom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Prénom"><br>
 
+        <label for="prenom">Numen</label>
+        <input type="text" id="numen" name="numen" placeholder="Numen"><br>
+
+        <label for="prenom">Numéro de téléphone</label>
+        <input type="text" id="tel" name="tel" placeholder="Numéro de téléphone"><br>
+
+        <label for="mdp">Mot de passe</label>
+        <input type="password" id="mdp" name="mdp" placeholder="mot de passe"><br>
+
+        <label for="mdp">Confirmation du mot de passe</label>
+        <input type="password" id="cmdp" name="cmdp" placeholder="Confirmation du mot de passe"><br>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email"><br>
+         
+ 
+        <label for="choix">Choississez votre catégorie</label>
+        <p>
+        <input type="radio" name="choix"> élève
+        <input type="radio" name="choix"> Prof</p>
+ 
+        <input type="submit" value="Insciption">
+    </form>
 </body>
-</html>
+</html> 
+
