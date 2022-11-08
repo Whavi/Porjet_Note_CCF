@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleFormulaire.css">
+    <title>Formulaire d'Inscription</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="formcon">
+            <a href="Accueil.html">Home</a>
+            <a href="form.html"> Inscription</a>
+            <a href="connexion.html"> Connexion</a>
+        </div>
+
+        <div class="title">Inscription</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nom d'utiilisateur</span>
+                    <input type="text" placeholder="Votre nom d'utilisateur" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Mot de passe</span>
+                    <input type="text" maxlength="24" placeholder="Votre mot de passe" required>
+                </div>
+            </div>
+            <div class="cat-details">
+                <input type="radio" name="cat" id="dot-1">
+                <input type="radio" name="cat" id="dot-2">
+                <span class="cat-titre">Catégorie de connexion</span>
+                <div class="cat">
+                    <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="prof">Prof</span>
+                        </label>
+                    <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="eleve">Eleve</span>
+                        </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Connexion">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
