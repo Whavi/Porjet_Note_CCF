@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleForm.css">
+    <link rel="stylesheet" href="styleFormulaire.css">
     <title>Formulaire d'Inscription</title>
 </head>
 
@@ -29,7 +29,7 @@
                 </div>
                 <div class="input-box ">
                     <span class="details ">Nom d'utilisateur</span>
-                    <input type="text " placeholder="Votre Nom d 'utilisateur" required>
+                    <input type="text" minlength="5" maxlength="16" placeholder="Votre Nom d 'utilisateur" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Numen</span>
@@ -37,19 +37,19 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Téléphone</span>
-                    <input type="text" maxlength="10" placeholder="Votre téléphone" required>
+                    <input type="tel" maxlength="10" placeholder="Votre téléphone" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="text" placeholder="Votre email" required>
+                    <input type="email" placeholder="Votre email" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Mot de passe</span>
-                    <input type="text" maxlength="24" placeholder="Votre mot de passe" required>
+                    <input type="password" minlength="8" maxlength="24" placeholder="Votre mot de passe" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Confirmation du mot de passe</span>
-                    <input type="text" maxlength="24" placeholder="confirmer votre mot de passe" required>
+                    <input type="password" minlength="8" maxlength="24" placeholder="confirmer votre mot de passe" required>
                 </div>
             </div>
             <div class="cat-details">
