@@ -175,6 +175,7 @@ form .button input:hover{
     color: white;
     text-decoration: underline;
     transition: 0.5s;
+    cursor: pointeur;
 }
 
 
