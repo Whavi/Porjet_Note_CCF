@@ -5,7 +5,40 @@
     font-family: 'Poppins', sans-serif
 }
 
+/* Boutton inscription, connexion, home */
 
+.box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to bottom, black,gray);    border-radius: 5px;
+}
+
+.container-button{
+    padding: 15px;
+    width: 500px;
+}
+
+.container-button a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    padding: 12px;
+    border-radius: 30px;
+    background: transparent;
+}
+
+.container-button a:hover{
+    content: "";
+    background: white;
+    text-decoration: underline;
+    color: black;
+    transition: 1s;
+}
+
+
+/* Contenair du body*/
 body{
     display: flex;
     align-items: center;
@@ -22,7 +55,7 @@ body{
     padding: 25px 30px;
     background: white;
 }
-
+ /* titre */
 .container .title{
     font-size: 25px;
     font-weight: 500;
@@ -71,10 +104,22 @@ form .user-details .input-box{
 .user-details .input-box input:valid{
     border-color: black;
 }
-form .cat-details .cat-title{
+.cat-details .cat-titre{
     font-size: 20px;
-    font-weight: 500;
+    position: relative;
+
 }
+
+.cat-details .cat-titre:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 30px;
+    background: black;
+}
+
 
 form .cat-details .cat{
     display: flex;
@@ -122,13 +167,16 @@ form .button input{
     font-weight: 18px;
     border-radius: 5px;
     letter-spacing: 1px;
-    background: black;
+    background: linear-gradient(to top, black,gray);
 }
 
 form .button input:hover{
-    background: gray;
-    color: black;
+    background: linear-gradient(to bottom, black,gray);
+    color: white;
+    text-decoration: underline;
+    transition: 0.5s;
 }
+
 
 
 @media (max-width: 584px){
@@ -150,4 +198,3 @@ form .button input:hover{
         width: 0;
     }
 }
-
