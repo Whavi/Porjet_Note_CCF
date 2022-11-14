@@ -14,20 +14,21 @@ heure_de_convocation TIME
 );
 
 CREATE TABLE IF NOT EXISTS épreuve (
-Libellé_épreuve_CCF VARCHAR(29), 
+libellé_épreuve_CCF VARCHAR(29), 
 libellé_du_BTS VARCHAR(39),
-Option_du_BTS TEXT(8),
+option_du_BTS TEXT(8),
 année_scolaire SMALLINT(4),
-Code_CCF CHAR(5),
+code_CCF CHAR(5),
 la_durée SMALLINT
 );
 
 
 CREATE TABLE IF NOT EXISTS id_prof (
-nom_prof VARCHAR(14),
-prénom_prof VARCHAR(14),
+NOM_PROF VARCHAR(14),
+PRENOM_PROF VARCHAR(14),
 ID_NUMEN CHAR(13),
 ID_NUMERO SMALLINT(10),
-ID_MAIL CHAR
+ID_MAIL CHAR,
+ID_TEL SMALLINT(10)
 )
 ;
