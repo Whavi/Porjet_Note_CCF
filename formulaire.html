@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleFormulaire.css">
+    <script src="Scriptform.js" defer></script>
     <title>Formulaire d'Inscription</title>
 </head>
 
@@ -33,9 +34,9 @@
                     <span class="details ">Nom d'utilisateur</span>
                     <input type="text" minlength="5" maxlength="16" placeholder="Votre Nom d 'utilisateur" required>
                 </div>
-                <div class="input-box">
+                <div class="input-box" id="numen" style="display: none">
                     <span class="details">Numen</span>
-                    <input type="text" maxlength="13" placeholder="Votre Numen" required>
+                    <input type="text" id="numen" maxlength="13" placeholder="Votre Numen" required >
                 </div>
                 <div class="input-box">
                     <span class="details">Téléphone</span>
@@ -55,8 +56,8 @@
                 </div>
             </div>
             <div class="cat-details">
-                <input type="radio" name="cat" id="dot-1">
-                <input type="radio" name="cat" id="dot-2">
+                <input type="radio" name="cat" id="dot-1" onclick="ShowHideDiv()">
+                <input type="radio" name="cat" id="dot-2" onclick="ShowHideDiv()">
                 <span class="cat-titre">Catégorie de d'Inscription </span>
                 <div class="cat">
                     <label for="dot-1">
