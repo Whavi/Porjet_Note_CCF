@@ -12,7 +12,8 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    background: linear-gradient(to bottom, black,gray);    border-radius: 5px;
+    background: linear-gradient(to bottom, black,gray);    
+    border-radius: 5px;
 }
 
 .container-button{
@@ -45,7 +46,7 @@ body{
     justify-content: center;
     height: 100vh;
     padding: 10px;
-    background: black;
+    background: linear-gradient(45deg,gray, black,black,gray);
 }
 
 .container{
