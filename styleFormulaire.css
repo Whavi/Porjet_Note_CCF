@@ -55,11 +55,14 @@ body{
     padding: 25px 30px;
     background: white;
 }
+
+
  /* titre */
 .container .title{
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    margin-top: 20px;
 }
 
 .container .title::before{
@@ -155,6 +158,7 @@ form input[type='radio']{
 form .button{
     height: 45px;
     margin: 45px 0;
+    margin-bottom: 0px;
 }
 
 form .button input{
@@ -175,7 +179,7 @@ form .button input:hover{
     color: white;
     text-decoration: underline;
     transition: 0.5s;
-    cursor: pointeur;
+    cursor: pointer;
 }
 
 
