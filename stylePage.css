@@ -91,10 +91,45 @@ header button a{
 
 /* Le corps de la page*/
 
-.Containerpage .case1{
-    padding-top: 1px;
-    background: green;
+.Containerpage {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Containerpage .casetop .casetop-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.Containerpage .casetop .casetop-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+
+.Containerpage .casetop p{
+    display: flex;
     border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: underline black;
+    color: black;
+    font-family: "Playfair Display", sans-serif;
+}
+
+.Containerpage .casetop h1{
+    padding-top: 1px;
+    border-radius: 20px;
+    margin : auto;
 }
 
 
