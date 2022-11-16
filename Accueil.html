@@ -1,172 +1,182 @@
-<!DOCTYPE html>
-<html lang="fr">
+/* Partie Page d'accueil */
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylePage.css">
-    <title>Site vitrine</title>
-</head>
-
-<body>
-    <!-- Barre de nav -->
-    <nav>
-        <a class="avatar-img" href="Accueil.html"> <img src="IMG/ENC.jpg"></a>
-        <div class="onglets">
-            <a href="Accueil.html">Home</a>
-            <a href="#contact">Contact</a>
-            <a href="formulaire.html">Inscription</a>
-            <a href="connexion.html">Connexion</a>
-        </div>
-    </nav>
-    <!-- Header -->
-    <header>
-        <h1>Page vitrine</h1>
-        <h4>Bienvenue sur ce site pour accéder à vos données</h4>
-        <button><a href="formulaire.html">Inscrivez-vous dès maintenant</a></button>
-    </header>
-
-    <!-- L'intérieur de page que je dois faire -->
-
-    <div class="Containerpage">
-        <div class="casetop">
-            <div class="casetop-1">
-                <div class="casecontain">
-                    <p>Titre</p>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                        Praesentium mollitia accusamus laborum
-                        velit,<br>
-                        vero impedit sit. Laudantium omnis tenetur quisquam <br>
-                        corporis minus iure hic dicta sapiente
-                        doloremque,<br>
-                        quasi odio voluptate.
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="Containerpage">
-        <div class="casetop">
-            <div class="casetop-2">
-                <div class="casecontain">
-                    <p>Titre</p>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                        Praesentium mollitia accusamus laborum
-                        velit,<br>
-                        vero impedit sit. Laudantium omnis tenetur quisquam <br>
-                        corporis minus iure hic dicta sapiente
-                        doloremque,<br>
-                        quasi odio voluptate.
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="Containerpage">
-        <div class="casetop">
-            <div class="casetop-1">
-                <div class="casecontain">
-                    <p>Titre</p>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                        Praesentium mollitia accusamus laborum
-                        velit,<br>
-                        vero impedit sit. Laudantium omnis tenetur quisquam <br>
-                        corporis minus iure hic dicta sapiente
-                        doloremque,<br>
-                        quasi odio voluptate.
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="Containerpage">
-        <div class="casetop">
-            <div class="casetop-2">
-                <div class="casecontain">
-                    <p>Titre</p>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                        Praesentium mollitia accusamus laborum
-                        velit,<br>
-                        vero impedit sit. Laudantium omnis tenetur quisquam <br>
-                        corporis minus iure hic dicta sapiente
-                        doloremque,<br>
-                        quasi odio voluptate.
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="Containerpage">
-        <div class="casetop">
-            <div class="casetop-1">
-                <div class="casecontain">
-                    <p>Titre</p>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                        Praesentium mollitia accusamus laborum
-                        velit,<br>
-                        vero impedit sit. Laudantium omnis tenetur quisquam <br>
-                        corporis minus iure hic dicta sapiente
-                        doloremque,<br>
-                        quasi odio voluptate.
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="Containerpage">
-        <div class="casetop">
-            <div class="casetop-2">
-                <div class="casecontain">
-                    <p>Titre</p>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                        Praesentium mollitia accusamus laborum
-                        velit,<br>
-                        vero impedit sit. Laudantium omnis tenetur quisquam <br>
-                        corporis minus iure hic dicta sapiente
-                        doloremque,<br>
-                        quasi odio voluptate.
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=family=Playfair+Display:wght@600&display=swap');
 
 
+html{scroll-behavior: smooth;
+}
 
-    <!-- Footer -->
-    <footer>
-        <h1>Nos services</h1>
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
 
-        <div class="services">
+/* La barre de navigation de la page*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #6f6f6f;
+}
 
-            <div class="service">
-                <h3>Nos Produits</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas quo et nam optio doloremque sint
-                    hic dicta, animi ad recusandae ut sit perferendis suscipit praesentium sunt rem ducimus eveniet
-                    earum!</p>
-            </div>
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
+}
 
-            <div class="service">
-                <h3>Légal Sites Internet</h3>
-                <p>Mentions légales et conditions générales d'utilisation de nos sites internet Politique de
-                    confidentialité Utilisation des cookies</p>
-            </div>
+nav .onglets a{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.avatar-img{
+    display: block;
+    margin-right: auto;
+    width: 100px;
+}
 
-            <div class="service">
-                <h3>Légal produits</h3>
-                <p>Conditions générales d'utilisation et de vente de nos logiciels Politique de protection des données
-                    personnelles</p>
-            </div>
 
-        </div>
+/* Le haut de page*/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('/IMG/System.png');
+    background-size: cover;
+    color: black;
+    padding: 40px;
+}
 
-        <p id="contact">Contact : 06 12 34 56 78 | &copy; 2022 Projet</p>
-    </footer>
-</body>
+header h1{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 50px;
+    color: white;
+}
 
-</html>
+header h4{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+header button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+header button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header button a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Le corps de la page*/
+
+.Containerpage {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Containerpage .casetop .casetop-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.Containerpage .casetop .casetop-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+
+.Containerpage .casetop p{
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: underline black;
+    color: black;
+    font-family: "Playfair Display", sans-serif;
+}
+
+.Containerpage .casetop h1{
+    padding-top: 1px;
+    border-radius: 20px;
+    margin : auto;
+}
+
+
+/* Le bas de page*/
+
+footer{
+    margin-top: 40px;
+    border-top: 5px solid #6f6f6f;
+    background-color: black;
+    color: white;
+    padding: 30px 100px;
+}
+
+footer h1{
+    font-family: 'Playfair Display', sans-serif;
+    border-bottom: 1px solid white;
+    width: 20%;
+    padding-bottom: 5px;
+}
+footer .services{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+footer .services .service{
+    margin-right: 30px;
+    padding: 10px;
+}
+
+footer .services .service p {
+    max-width: 300px;
+}
+
+footer #contact{
+    color: rgb(181, 181, 181);
+}
+
+
+@media screen and (max-width:680px){
+    nav .onglets{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    footer{
+        padding: 30px;
+    }
+}
