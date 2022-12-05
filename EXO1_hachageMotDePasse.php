@@ -40,11 +40,10 @@ $statement->bindParam(':mail', $mail, PDO::PARAM_STR);
 $statement->execute() ;
 
 echo '<script type="text/javascript">alert("Données enregistrées avec succès"); </script>';  
-
+header("Location: connexion.html");
 }
 
 else
 {
     echo '<script type="text/javascript">alert("Vous devez remplir tous les champs"); </script>';
     }
-
