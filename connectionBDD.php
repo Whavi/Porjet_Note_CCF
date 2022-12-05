@@ -2,7 +2,7 @@
     const UTILISATEUR="root";
     const MOTDEPASSE="";
     const SERVEUR="localhost";
-    const BASEDEDONNEES="ddfb";
+    const BASEDEDONNEES="dd/fb";
     function getConnection(){
         $utilisateur = UTILISATEUR;
         $motDePasse = MOTDEPASSE;
