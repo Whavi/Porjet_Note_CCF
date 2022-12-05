@@ -10,6 +10,7 @@ require "./connectionBDD.php" ;
 // Et si il a saisi quelque chose dans le champ motDePasse ce texte va dans le
 // variable $password
 
+
 if (isset($_POST['soumettre'])) {
     $utilisateur = (isset($_POST['identifiant'])) ? $_POST['identifiant'] :null;
     $password = (isset($_POST['motDePasse'])) ? $_POST['motDePasse'] :null;
@@ -18,7 +19,7 @@ if (isset($_POST['soumettre'])) {
 
 if(!empty($utilisateur)&& !empty($password) && !empty($numen)) {
 
-$hashDuMotDePasse = password_hash($password, PASSWORD_ARGON2ID);
+// $hashDuMotDePasse = password_hash($password, PASSWORD_ARGON2ID);
 $sql = "select ID_NUMEN, identifiant, motDePasse from comptes where identifiant= ?" ;
 $connection = getConnection();
 $instructions = $connection->prepare($sql);
@@ -26,28 +27,19 @@ $instructions->bindParam(1, $utilisateur, PDO::PARAM_STR);
 $instructions->execute();
 $resultat = $instructions->fetchAll() ;
 
-print_r($resultat);
-$loginValide = false;
+
 // Récupération ici du hash du mot de passe en provenance de la BDD situé dans $resultat
-
+$hash = $resultat[0]['motDePasse'] ;
 // Vérification avec la fonction PHP password_verify
+$loginValide = password_verify($password,$hash) ;
 
-if (password_verify($password, $hashDuMotDePasse)) {
-    echo 'Password is valid!';
-    $loginValide == true;
+if ($loginValide) {
+    //echo '<script type="text/javascript">alert("Utilisateur bien loggé"); </script>';  
+    header("Location: accueil.html");
     
 } else {
-    echo 'Invalid password.';
-    $loginValide == false;
-    header("Location: formu.html");
-}
-
-// Si vérification valide, on affiche que l'utilisateur est bien loggé
-if ($loginValide == true){
-echo '<script type="text/javascript">alert("Utilisateur bien loggé"); </script>';  
-header("Location: formuinscription.html");
-} else {
-echo ("<script type='text/javascript'>alert('identifiant ou mot de passe invalide'); </script>"); 
+    //echo ("<script type='text/javascript'>alert('identifiant ou mot de passe invalide'); </script>"); 
+    header("Location: connexion.html");
 }
 }
 ?>
