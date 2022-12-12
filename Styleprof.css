@@ -1,0 +1,234 @@
+/* Partie Page d'accueil */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=family=Playfair+Display:wght@600&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* La barre de navigation de la page*/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    background-color: rgb(195, 192, 192);
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-right: 280px;
+    border-bottom: 5px solid black;
+}
+
+nav .onglets {
+    margin-top: 3px;
+    margin-left: 300px;
+}
+
+nav .onglets a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 20px;
+    padding: auto;
+}
+
+
+/* Le haut de page*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg,gray, black,black,gray);
+    background-size: cover;
+    color: black;
+    padding: 40px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+header h4 {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+header button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+header button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header button a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Le corps de la page*/
+
+.bodypage {
+    background: linear-gradient(45deg, #6f6f6f, black, #817e7e, black, #6f6f6f);
+    height: 100%;
+    margin-bottom: -40px;
+    border-bottom: 5px solid red;
+    border-top: 5px solid red;
+}
+
+.Containerpage {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Containerpage .casetop .casetop-1,
+.Containerpage .casetop .casetop-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    background: gray;
+    border-radius: 15px;
+    border-style: outset;
+    border-color: black transparent
+}
+
+
+.Containerpage .casetop p {
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    text-decoration: underline white;
+    color: white;
+    font-family: "Playfair Display", sans-serif;
+}
+
+.Containerpage .casetop h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1px;
+    border-radius: 20px;
+    margin: 10px 10px 100px 5px;
+    color: floralwhite;
+}
+
+
+/* Le bas de page*/
+
+footer {
+    margin-top: 40px;
+    border-top: 5px solid black;
+    background-color: rgb(28, 28, 28);
+    color: white;
+    padding: 30px 100px;
+}
+
+footer h1 {
+    font-family: 'Playfair Display', sans-serif;
+    border-bottom: 1px solid white;
+    width: 20%;
+    padding-bottom: 5px;
+}
+
+footer .services {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+footer .services .service {
+    margin-right: 30px;
+    padding: 10px;
+}
+
+footer .services .service p {
+    max-width: 300px;
+}
+
+footer #contact {
+    color: rgb(181, 181, 181);
+}
+
+
+@media screen and (max-width:680px) {
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+}
+.table-style  {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+thead tr {
+    background-color: midnightblue;
+    color: #fff;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+tbody tr, td, th {
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    align-items: flex-start;
+  }
+  .table-style  {
+    width: 100%;
+    margin: 0px;
+    font-size: 10px;
+  }
+  th, td {
+    padding: 10px 7px;
+}
+
+}

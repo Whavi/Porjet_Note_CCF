@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styleprof.css">
+    <title>Site vitrine</title>
+</head>
+
+<body>
+    <!-- Barre de nav -->
+    <nav>
+        <div class="onglets">
+            <a href="Accueil.html">Saisie de note</a>
+            <a href="#contact">Contact</a>
+            <a href="formulaire.html">Profil</a>
+            <a href="connexion.html">Déconnexion</a>
+        </div>
+    </nav>
+    <!-- L'intérieur de page que je dois faire -->
+    <header>
+        <h4>Bienvenue sur ce site pour inscrire vos données</h4>
+        <button><a href="formulaire.html">Vous pouvez vous déconnecter ici !</a></button>
+
+    </header>
+    <table class="table-style">
+
+        <thead>
+            <tr>
+                <th>BTS</th>
+                <th>Option</th>
+                <th>Nom/Prenom</th>
+                <th>Note</th>
+                <th>Coefficient</th>
+                <th>Date</th>
+                <th>Commentaire</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr>
+
+                <td>
+                    <select name="ID_BTS">
+                        <option value="">Veuillez choisir un BTS</option>
+                        <option value="SIO">Services informatiques aux organisations </option>
+                        <option value="CI">Commerce international </option>
+                        <option value="COM">Communication </option>
+                        <option value="CG">Comptabilité et Gestion </option>
+                        <option value="NDRC">Négociation Digitalisation de la relation client </option>
+                        <option value="PI">Professions immobilières</option>
+                        <option value="SAM">Support à l'action managériale</option>
+                        <option value="TOU">Tourisme</option>
+                    </select>
+
+                </td>
+                <td>
+                    <select name="Option">
+                        <option value="">Veuillez choisir l'option</option>
+                        <option value="RIEN">Aucune Option </option>
+                        <option value="SISR">Solutions d’infrastructure, systèmes et réseaux
+                        </option>
+                        <option value="SLAM">Solutions logicielles et applications métiers 
+                        </option>
+                    </select>
+                </td>
+
+                <td>
+                    <select name="NOM_PRENOM">
+                        <option value="">Veuillez choisir un élève</option>
+                        <option value="ABIR">ABIRAM Raveendran </option>
+                        <option value="ANGW">ANGLOMA Wesley </option>
+                        <option value="ANZE">ANZALA Emeric </option>
+                        <option value="ASTM">ASTASIE Mounia</option>
+                        <option value="BAZK">BAZES Kévin</option>
+                        <option value="CISA">CISSE Adam Bacongo</option>
+                        <option value="DAVT">DAVID Tom</option>
+                        <option value="DOSD">DOS SANTOS David</option>
+                        <option value="DRAM">DRAME Mouhamadou</option>
+                        <option value="ELBAA">EL BANA Ashraf</option>
+                        <option value="ELHAN">EL HAFSI Nizar</option>
+                        <option value="GOUS">GOUBIN Sylvain</option>
+                        <option value="GUEN">GUERIN Nicolas</option>
+                        <option value="HASN">HASNAOUI Nassim</option>
+                        <option value="HIAM">HIAUMET Mattéo</option>
+                        <option value="INDI">INDRALINGAM Inthusan</option>
+                        <option value="LASAM">LA SALA Milan</option>
+                        <option value="MANM">MANE Malang</option>
+                        <option value="MARG">MARTINS Guillaume</option>
+                        <option value="MATE">MATHIEU Emma</option>
+                        <option value="MENJ">MENDES Joaquim</option>
+                        <option value="MESC">MESINA Cristian</option>
+                        <option value="NADR">NADJI Rayan</option>
+                        <option value="NAZT">NAZIR Toycan</option>
+                        <option value="RIHI">RIHANE Inès</option>
+                        <option value="SARN">SARMIENTO Nijel</option>
+                        <option value="SAVA">SAVOIE Adrien</option>
+                        <option value="YAGN">YAGOUBI Nabil</option>
+                        <option value="YANA">YANGUI Amani</option>
+                        <option value="YES">YE Stéphane</option>
+                        <option value="ZHAC">ZHANG Christophe</option>
+                </td>
+                </select>
+
+                <td><input type="number" name="Note" min="1" max="100"></td>
+                <td>
+                    <input type="number" name="Coefficient" min="1" max="100">
+                </td>
+
+                <td>
+                    <input type="date" name=date>
+                </td>
+
+                <td>
+                    <input type="text" name="commentaire">
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <Button:submit> </Button:submit>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <h1>Nos services</h1>
+
+        <div class="services">
+
+            <div class="service">
+                <h3>Nos Produits</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas quo et nam optio doloremque sint
+                    hic dicta, animi ad recusandae ut sit perferendis suscipit praesentium sunt rem ducimus eveniet
+                    earum!</p>
+            </div>
+
+            <div class="service">
+                <h3>Légal Sites Internet</h3>
+                <p>Mentions légales et conditions générales d'utilisation de nos sites internet Politique de
+                    confidentialité Utilisation des cookies</p>
+            </div>
+
+            <div class="service">
+                <h3>Légal produits</h3>
+                <p>Conditions générales d'utilisation et de vente de nos logiciels Politique de protection des données
+                    personnelles</p>
+            </div>
+
+        </div>
+
+        <p id="contact">Contact : 06 12 34 56 78 | &copy; 2022 Projet</p>
+    </footer>
+</body>
+
+</html>
