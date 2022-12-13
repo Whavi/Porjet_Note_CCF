@@ -20,8 +20,12 @@
         </div>
     </nav>
     <!-- L'intérieur de page que je dois faire -->
+    <form action="PHP/EXO1_hachageMotDePasse.php" method="post"></form>
     <header>
-        <h4>Bienvenue sur ce site pour inscrire vos données</h4>
+        <h4>Bienvenue sur ce site pour inscrire vos données, </h4>
+        <?php 
+            echo $_SESSION['utilisateur']
+            ?>
         <button><a href="formulaire.html">Vous pouvez vous déconnecter ici !</a></button>
 
     </header>
@@ -30,7 +34,6 @@
         <thead>
             <tr>
                 <th>BTS</th>
-                <th>Option</th>
                 <th>Nom/Prenom</th>
                 <th>Note</th>
                 <th>Coefficient</th>
@@ -46,7 +49,8 @@
                 <td>
                     <select name="ID_BTS">
                         <option value="">Veuillez choisir un BTS</option>
-                        <option value="SIO">Services informatiques aux organisations </option>
+                        <option value="SIOSISR">Services informatiques aux organisations SISR </option>
+                        <option value="SIOSLAM">Services informatiques aux organisations SLAM </option>
                         <option value="CI">Commerce international </option>
                         <option value="COM">Communication </option>
                         <option value="CG">Comptabilité et Gestion </option>
@@ -56,16 +60,6 @@
                         <option value="TOU">Tourisme</option>
                     </select>
 
-                </td>
-                <td>
-                    <select name="Option">
-                        <option value="">Veuillez choisir l'option</option>
-                        <option value="RIEN">Aucune Option </option>
-                        <option value="SISR">Solutions d’infrastructure, systèmes et réseaux
-                        </option>
-                        <option value="SLAM">Solutions logicielles et applications métiers 
-                        </option>
-                    </select>
                 </td>
 
                 <td>
@@ -122,9 +116,13 @@
         </tbody>
 
     </table>
-
-    <Button:submit> </Button:submit>
-
+    <br>
+    <div class="int">
+        <input name ="soumettre" type="submit" value="Envoyer">
+    </div>
+    <br>
+    <br>
+    </form>
 
 
 
