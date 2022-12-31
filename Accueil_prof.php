@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="choicebts.js" defer></script>
     <link rel="stylesheet" href="Styleprof.css">
     <title>Site vitrine</title>
 </head>
@@ -48,8 +49,8 @@
             <tr>
 
                 <td>
-                    <select name="ID_BTS">
-                        <option value="">Veuillez choisir un BTS</option>
+                    <select name="ID_BTS" id='parent_select'>
+                        <option value="" selected="selected">Veuillez choisir un BTS</option>
                         <option value="SIOSISR">Services informatiques aux organisations SISR </option>
                         <option value="SIOSLAM">Services informatiques aux organisations SLAM </option>
                         <option value="CI">Commerce international </option>
@@ -60,44 +61,9 @@
                         <option value="SAM">Support à l'action managériale</option>
                         <option value="TOU">Tourisme</option>
                     </select>
-
                 </td>
-
                 <td>
-                    <select name="NOM_PRENOM">
-                        <option value="">Veuillez choisir un élève</option>
-                        <option value="ABIRAM">ABIRAM Raveendran </option>
-                        <option value="ANGLOMA">ANGLOMA Wesley </option>
-                        <option value="ANZALA">ANZALA Emeric </option>
-                        <option value="ASTASIE">ASTASIE Mounia</option>
-                        <option value="BAZES">BAZES Kévin</option>
-                        <option value="CISSE">CISSE Adam Bacongo</option>
-                        <option value="DAVID">DAVID Tom</option>
-                        <option value="DOS SANTOS">DOS SANTOS David</option>
-                        <option value="DRAME">DRAME Mouhamadou</option>
-                        <option value="EL BANA">EL BANA Ashraf</option>
-                        <option value="EL HAFSI">EL HAFSI Nizar</option>
-                        <option value="GOUBIN">GOUBIN Sylvain</option>
-                        <option value="GUERIN">GUERIN Nicolas</option>
-                        <option value="HASNAOUI">HASNAOUI Nassim</option>
-                        <option value="HIAUMET">HIAUMET Mattéo</option>
-                        <option value="INDRALINGAM">INDRALINGAM Inthusan</option>
-                        <option value="LA SALA MILAN">LA SALA Milan</option>
-                        <option value="MANE">MANE Malang</option>
-                        <option value="MARTINS">MARTINS Guillaume</option>
-                        <option value="MATHIEU">MATHIEU Emma</option>
-                        <option value="MENDES">MENDES Joaquim</option>
-                        <option value="MESINA">MESINA Cristian</option>
-                        <option value="NADJI">NADJI Rayan</option>
-                        <option value="NAZIR">NAZIR Toycan</option>
-                        <option value="RIHANE">RIHANE Inès</option>
-                        <option value="SARMIENTO">SARMIENTO Nijel</option>
-                        <option value="SAVOIE">SAVOIE Adrien</option>
-                        <option value="YAGOUBI">YAGOUBI Nabil</option>
-                        <option value="YANGUI">YANGUI Amani</option>
-                        <option value="YE">YE Stéphane</option>
-                        <option value="ZHANG">ZHANG Christophe</option>
-                    </select> 
+                    <select name="NOM_PRENOM" id='child_select'>
                 </td>
                
                 <td>
