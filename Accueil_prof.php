@@ -14,7 +14,7 @@
     <!-- Barre de nav -->
     <nav>
         <div class="onglets">
-            <a href="Accueil.html">Saisie de note</a>
+            <a href="Accueil_prof.php">Saisie de note</a>
             <a href="#contact">Contact</a>
             <a href="#">Profil</a>
             <a href="deconnexion.php">Déconnexion</a>
