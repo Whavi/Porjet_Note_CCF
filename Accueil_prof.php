@@ -16,8 +16,8 @@
         <div class="onglets">
             <a href="Accueil.html">Saisie de note</a>
             <a href="#contact">Contact</a>
-            <a href="formulaire.html">Profil</a>
-            <a href="connexion.html">Déconnexion</a>
+            <a href="#">Profil</a>
+            <a href="deconnexion.php">Déconnexion</a>
         </div>
     </nav>
     <!-- L'intérieur de page que je dois faire -->
@@ -27,7 +27,7 @@
         <?php 
             echo $_SESSION['utilisateur']
             ?>
-        <button><a href="formulaire.html">Vous pouvez vous déconnecter ici !</a></button>
+        <button><a href="deconnexion.php">Vous pouvez vous déconnecter ici !</a></button>
 
     </header>
     <table class="table-style">
