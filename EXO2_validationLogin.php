@@ -35,7 +35,7 @@ $loginValide = password_verify($password,$hash) ;
 
 if ($loginValide) {
     //echo '<script type="text/javascript">alert("Utilisateur bien loggé"); </script>';  
-    header("Location: accueil.html");
+    header("Location: Accueil_prof.php");
     
 } else {
     //echo ("<script type='text/javascript'>alert('identifiant ou mot de passe invalide'); </script>"); 
