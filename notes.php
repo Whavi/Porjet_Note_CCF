@@ -1,51 +1,37 @@
 <?php
 require "./connectionBDD.php" ;
 
+if (isset($_POST['soumettre'])){
+    $BTS = (isset($_POST['ID_BTS'])) ? $_POST['ID_BTS'] :null ;
+    $Nom_prenom = (isset($_POST['NOM_PRENOM'])) ? $_POST['NOM_PRENOM'] :null;
+    $CCF = (isset($_POST['CCF'])) ? $_POST['CCF'] :null;
+    $Note = (isset($_POST['Note'])) ? $_POST['Note'] :null ;
+    $Coefficient = (isset($_POST['Coefficient'])) ? $_POST['Coefficient'] :null;
+    $date = (isset($_POST['date'])) ? $_POST['date'] :null;
+    $Appreciation = (isset($_POST['Appreciation'])) ? $_POST['Appreciation']:null;
+}
+if(!empty($BTS)&&!empty($Nom_prenom)&&!empty($CCF) &&!empty($Note) &&!empty($Coefficient)&&!empty($date)&&!empty($Appreciation)){
 
-$sql = "SELECT e.NOM, e.PRENOM, e.OPTION_SIO FROM eleves e" ;
-$connection = getConnection();
-$instructions = $connection->prepare($sql);
-$instructions->execute();
-$resultat = $instructions->fetchAll() ;
+    $connection = getConnection();
+    $stat = $connection->prepare("SELECT e.ID FROM eleves e WHERE e.NOM = :NOM");
+     $stat->bindParam(':NOM', $Nom_prenom, PDO::PARAM_STR);
+     $stat->execute() ;
+     $resultat = $stat->fetchAll();
 
-echo "
-<html>
-    <head>
-       <meta charset='utf-8'>
-        <link rel='stylesheet' href='note.css' media='screen' type='text/css' />
-        <title> Notes </title>
-    </head>";
-echo "<body>";
-echo "<table>";
-echo "<tr>";
-echo "<td>Nom Eleves</td>";
-echo "<td>Prenom Eleve</td>";
-echo "<td>Option Eleve</td>";
-echo "</tr>";
-foreach ($resultat as $key => $value) { 
+    $Candidat = $resultat[0]["ID"];
 
-    foreach ($value as $key2 => $value2) {
-        if ($key2 == "NOM"){
-            $NomEleves = $value2;
-            
-        } 
-        if ($key2 == "PRENOM"){
-            $PrenomEleves = $value2;
-           
-        }
-        if ($key2 == "OPTION_SIO"){
-            $OptionEleves = $value2;
-            
-        }
+    $statement = $connection->prepare("INSERT INTO notes ( FK_ID_CANDIDAT, CCF, NOTE_, COEFF, DATE_EVAL, APPRECIATION) VALUES ( :ID_CANDIDAT, :CCF, :Note_, :coeff, :date_eval, :appreciation)");
+    $statement->bindParam(':ID_CANDIDAT', $Candidat, PDO::PARAM_STR);    
+    $statement->bindParam(':CCF', $CCF, PDO::PARAM_STR);
+    $statement->bindParam(':Note_', $Note, PDO::PARAM_STR);
+    $statement->bindParam(':coeff', $Coefficient, PDO::PARAM_STR);
+    $statement->bindParam(':date_eval', $date, PDO::PARAM_STR);
+    $statement->bindParam(':appreciation', $Appreciation, PDO::PARAM_STR);
+    $statement->execute();
+    $resultat = $statement->fetchAll();
+} 
 
-    }
-    echo "<tr>";
-    echo "<td>$NomEleves</td>";
-    echo "<td>$PrenomEleves</td>";
-    echo "<td>$OptionEleves</td>";
-    echo "</tr>";
-    
+else{
 
- }
- echo "</table>";
- echo "</body>";
+    echo '<script type="text/javascript">alert("Vous devez remplir tous les champs"); </script>';
+}
